@@ -1,0 +1,78 @@
+---
+layout: runbook
+title: '0002 · Split #4471 and triage by cause'
+owner: Mike Jones and Codex
+status: proposed
+reviewed: '2026-10-28'
+signature: 'Mike Jones · Codex · MEGA S01E03 · 2026-10-28'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+</script>
+
+## What the export shows
+
+The [original incident page](/kb/incidents/4471) says one issue and one queued fix.
+Its rendered cause table disagrees. The table below reads the report export and
+tenant directory at render time, deduplicates report IDs, and classifies each
+report by tenant locale, channel, and form version. Intake tags only describe
+what intake guessed from the reporter's browser.
+
+<CauseTable ticket={4471} />
+
+The **parser** reads day-first tenant dates month first. The **hint** on booking-v3
+asks people to type month first, but the form interprets the entry day first.
+These require separate tickets and independently verified fixes. The repository's
+issue drafts and report-ID membership files record the export snapshot; rerun the
+analysis and rebuild this page when data changes.
+
+<Callout>
+The five reports footnoted in the table remain in their classifier-assigned group.
+Their bodies mention one-day shifts, timezone differences, or an invite arriving
+before booking. Those symptoms require investigation; the export does not prove
+a third cause or prove that a parser fix resolves them.
+</Callout>
+
+## When reports arrived, and when the desk merged them
+
+<QueueTimeline ticket={4471} />
+
+The two series measure different events. The large merge batch is not a burst of
+new failures. Reports arrived before that batch and continued afterward, including
+near the export cutoff. “Known” is a workflow label, not evidence that incoming
+reports stopped or that either failure was fixed. This export is a dated snapshot;
+check newer queue data before relying on these counts today.
+
+## Proposed replacement for decision 0001
+
+This record proposes superseding [decision 0001](/kb/decisions/0001-dedupe-by-subject)
+and its [subject-based triage instructions](/kb/triage/dedupe). The accepted record
+is preserved as history. Its old review date is another reason to check the current
+behavior rather than treating the prose as current evidence.
+
+Read the report body and resolve the tenant before merging. Compare the tenant's
+locale, channel, deployed form, symptoms, and known causal behavior. Merge reports
+with the same established cause even if subjects differ; keep different causes
+separate even if subjects match. Missing tenant information means investigate,
+not automatically merge. Preserve a report's ID and count it once.
+
+<DedupeExplorer />
+
+The explorer runs the same classification logic as the cause table. It demonstrates
+why the old subject rule can both split a single cause and merge different causes.
+Classification supports triage; conflicting symptoms still deserve investigation.
+
+## Follow-through
+
+Keep one issue for the shared parser and one for the booking-v3 hint. Each issue
+records its report count, evidence, reproduction, and checks. Link future reports
+to the matching cause, retain uncertain cases for investigation, and review this
+page after the next export or a verified fix. Do not describe either issue as
+resolved until its own acceptance checks pass.
+
+<RenderStamp {signature} />
