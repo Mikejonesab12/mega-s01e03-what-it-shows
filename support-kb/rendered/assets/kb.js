@@ -3467,30 +3467,59 @@ var Ho = {
 	status: "proposed",
 	reviewed: "2026-10-28",
 	signature: "Mike Jones · Codex · MEGA S01E03 · 2026-10-28"
-}, { layout: Uo, title: Wo, owner: Go, status: Ko, reviewed: qo, signature: Jo } = Ho, Yo = Q(/* @__PURE__ */ Y("<h2>What the export shows</h2> <p>The <a href=\"/kb/incidents/4471\">original incident page</a> says one issue and one queued fix.\nIts rendered cause table disagrees. The table below reads the report export and\ntenant directory at render time, deduplicates report IDs, and classifies each\nreport by tenant locale, channel, and form version. Intake tags only describe\nwhat intake guessed from the reporter’s browser.</p> <!> <p>The <strong>parser</strong> reads day-first tenant dates month first. The <strong>hint</strong> on booking-v3\nasks people to type month first, but the form interprets the entry day first.\nThese require separate tickets and independently verified fixes. The repository’s\nissue drafts and report-ID membership files record the export snapshot; rerun the\nanalysis and rebuild this page when data changes.</p> <!> <h2>When reports arrived, and when the desk merged them</h2> <!> <p>The two series measure different events. The large merge batch is not a burst of\nnew failures. Reports arrived before that batch and continued afterward, including\nnear the export cutoff. “Known” is a workflow label, not evidence that incoming\nreports stopped or that either failure was fixed. This export is a dated snapshot;\ncheck newer queue data before relying on these counts today.</p> <h2>Proposed replacement for decision 0001</h2> <p>This record proposes superseding <a href=\"/kb/decisions/0001-dedupe-by-subject\">decision 0001</a> and its <a href=\"/kb/triage/dedupe\">subject-based triage instructions</a>. The accepted record\nis preserved as history. Its old review date is another reason to check the current\nbehavior rather than treating the prose as current evidence.</p> <p>Read the report body and resolve the tenant before merging. Compare the tenant’s\nlocale, channel, deployed form, symptoms, and known causal behavior. Merge reports\nwith the same established cause even if subjects differ; keep different causes\nseparate even if subjects match. Missing tenant information means investigate,\nnot automatically merge. Preserve a report’s ID and count it once.</p> <!> <p>The explorer runs the same classification logic as the cause table. It demonstrates\nwhy the old subject rule can both split a single cause and merge different causes.\nClassification supports triage; conflicting symptoms still deserve investigation.</p> <h2>Follow-through</h2> <p>Keep one issue for the shared parser and one for the booking-v3 hint. Each issue\nrecords its report count, evidence, reproduction, and checks. Link future reports\nto the matching cause, retain uncertain cases for investigation, and review this\npage after the next export or a verified fix. Do not describe either issue as\nresolved until its own acceptance checks pass.</p> <!>", 1), Xo[o], [
+}, { layout: Uo, title: Wo, owner: Go, status: Ko, reviewed: qo, signature: Jo } = Ho, Yo = Q(/* @__PURE__ */ Y("<h2>What the export shows</h2> <p>This section preserves the <strong>4 October export snapshot</strong>, before engineering’s\nclosure. The table’s ticket labels describe that historical export; the new\nissue links and current dispositions are recorded below.</p> <p>The <a href=\"/kb/incidents/4471\">original incident page</a> says one issue and one queued fix.\nIts rendered cause table disagrees. The table below reads the report export and\ntenant directory at render time, deduplicates report IDs, and classifies each\nreport by tenant locale, channel, and form version. Intake tags only describe\nwhat intake guessed from the reporter’s browser.</p> <!> <p>The <strong>parser</strong> reads day-first tenant dates month first. The <strong>hint</strong> on booking-v3\nasks people to type month first, but the form interprets the entry day first.\nThese require separate tickets and independently verified fixes. The repository’s\nissue drafts and report-ID membership files record the export snapshot; rerun the\nanalysis and rebuild this page when data changes.</p> <!> <h2>When reports arrived, and when the desk merged them</h2> <!> <p>The two series measure different events. The large merge batch is not a burst of\nnew failures. Reports arrived before that batch and continued afterward, including\nnear the export cutoff. “Known” is a workflow label, not evidence that incoming\nreports stopped or that either failure was fixed. This export is a dated snapshot;\ncheck newer queue data before relying on these counts today.</p> <h2>Proposed replacement for decision 0001</h2> <p>This record proposes superseding <a href=\"/kb/decisions/0001-dedupe-by-subject\">decision 0001</a> and its <a href=\"/kb/triage/dedupe\">subject-based triage instructions</a>. The accepted record\nis preserved as history. Its old review date is another reason to check the current\nbehavior rather than treating the prose as current evidence.</p> <p>Read the report body and resolve the tenant before merging. Compare the tenant’s\nlocale, channel, deployed form, symptoms, and known causal behavior. Merge reports\nwith the same established cause even if subjects differ; keep different causes\nseparate even if subjects match. Missing tenant information means investigate,\nnot automatically merge. Preserve a report’s ID and count it once.</p> <!> <p>The explorer runs the same classification logic as the cause table. It demonstrates\nwhy the old subject rule can both split a single cause and merge different causes.\nClassification supports triage; conflicting symptoms still deserve investigation.</p> <h2>Engineering update · 5 October</h2> <p>The <a href=\"https://hq.mega.dev/challenges/what-it-shows#engineering-update\" rel=\"nofollow\">course’s engineering update</a> says <strong>#4471 closed 05 oct</strong> and gives separate outcomes:</p> <ul><li><a href=\"https://github.com/Mikejonesab12/mega-s01e03-what-it-shows/issues/1\" rel=\"nofollow\">Parser issue</a>: <strong>fixed</strong> — <code>fix(dates): parse dd/mm for eu locales</code>. Close as completed based\non that engineering report.</li> <li><a href=\"https://github.com/Mikejonesab12/mega-s01e03-what-it-shows/issues/2\" rel=\"nofollow\">Hint issue</a>: <strong>won’t fix</strong> — booking-v3 form retired. Close as not planned; retirement is\nthe stated disposition, not a claim that the hint was corrected.</li></ul> <p>These outcomes postdate the export. Keep the historical counts and original\nevidence; closing a ticket does not remove its reports. Engineering’s update is\nthe closure evidence, not a product test performed by this harness. The export’s\nfive exceptional bodies still do not independently establish a third root cause.\nIf those symptoms recur after the fix or retirement, investigate current evidence\nand open a separate issue when a distinct cause is established.</p> <h2>Follow-through</h2> <p>Keep parser and hint dispositions separate. Link future reports to the matching\ncause, retain uncertain cases for investigation, and review this page after the\nnext export or a verified behavior change. Do not infer that every symptom was\nfixed just because the umbrella ticket closed.</p> <!>", 1), Xo[o], [
 	[15, 0],
 	[
 		16,
 		0,
-		[[16, 7]]
+		[[16, 30]]
 	],
 	[
-		22,
+		19,
 		0,
-		[[22, 7], [22, 77]]
+		[[19, 7]]
 	],
-	[33, 0],
-	[35, 0],
-	[40, 0],
 	[
-		41,
+		25,
 		0,
-		[[41, 36], [44, 8]]
+		[[25, 7], [25, 77]]
 	],
-	[47, 0],
-	[53, 0],
+	[36, 0],
+	[38, 0],
+	[43, 0],
+	[
+		44,
+		0,
+		[[44, 36], [47, 8]]
+	],
+	[50, 0],
 	[56, 0],
-	[57, 0]
+	[59, 0],
+	[
+		60,
+		0,
+		[[60, 7], [64, 5]]
+	],
+	[
+		65,
+		0,
+		[[
+			66,
+			0,
+			[
+				[66, 4],
+				[70, 0],
+				[70, 25]
+			]
+		], [
+			72,
+			0,
+			[[72, 4], [76, 0]]
+		]]
+	],
+	[79, 0],
+	[85, 0],
+	[86, 0]
 ]);
 function Xo(e, t) {
 	Ri(new.target);
@@ -3504,23 +3533,23 @@ function Xo(e, t) {
 	var r = { ...zi() };
 	return j(() => Ua(e, Fa(() => n, () => Ho, {
 		children: Ni(Xo, (e, t) => {
-			var n = Yo(), r = B(Zn(n), 4);
-			j(() => vo(r, { ticket: 4471 }), "component", Xo, 21, 0, { componentTag: "CauseTable" });
+			var n = Yo(), r = B(Zn(n), 6);
+			j(() => vo(r, { ticket: 4471 }), "component", Xo, 24, 0, { componentTag: "CauseTable" });
 			var i = B(r, 4);
 			j(() => Bo(i, {
 				children: Ni(Xo, (e, t) => {
 					Be(), X(e, _i("The five reports footnoted in the table remain in their classifier-assigned group.\nTheir bodies mention one-day shifts, timezone differences, or an invite arriving\nbefore booking. Those symptoms require investigation; the export does not prove\na third cause or prove that a parser fix resolves them."));
 				}),
 				$$slots: { default: !0 }
-			}), "component", Xo, 27, 0, { componentTag: "Callout" });
+			}), "component", Xo, 30, 0, { componentTag: "Callout" });
 			var a = B(i, 4);
-			j(() => Co(a, { ticket: 4471 }), "component", Xo, 34, 0, { componentTag: "QueueTimeline" });
+			j(() => Co(a, { ticket: 4471 }), "component", Xo, 37, 0, { componentTag: "QueueTimeline" });
 			var o = B(a, 10);
-			j(() => $(o, {}), "component", Xo, 52, 0, { componentTag: "DedupeExplorer" });
-			var s = B(o, 8);
+			j(() => $(o, {}), "component", Xo, 55, 0, { componentTag: "DedupeExplorer" });
+			var s = B(o, 16);
 			j(() => Lo(s, { get signature() {
 				return Jo;
-			} }), "component", Xo, 62, 0, { componentTag: "RenderStamp" }), X(e, n);
+			} }), "component", Xo, 90, 0, { componentTag: "RenderStamp" }), X(e, n);
 		}),
 		$$slots: { default: !0 }
 	})), "component", Xo, 13, 0, { componentTag: "Layout_MDSVEX_DEFAULT" }), N(r);

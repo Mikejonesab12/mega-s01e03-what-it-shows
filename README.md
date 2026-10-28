@@ -19,6 +19,9 @@ The reports and tenants are part of the course exercise.
 
 ## Deliverables
 
+- [Parser issue #1](https://github.com/Mikejonesab12/mega-s01e03-what-it-shows/issues/1): completed, per engineering's 5 October fix report.
+- [Hint issue #2](https://github.com/Mikejonesab12/mega-s01e03-what-it-shows/issues/2): not planned, because booking-v3 was retired.
+
 - [Signed .svx page](support-kb/src/routes/kb/decisions/0002-triage-by-cause/+page.svx)
 - [Rendered page HTML](support-kb/rendered/kb/decisions/0002-triage-by-cause/index.html)
 - [Rendered page screenshot](preview.png)
@@ -50,3 +53,7 @@ the local client bundle makes the explorer interactive. It needs no remote CDN.
 Rebuild after source or export changes; saved HTML is a dated snapshot.
 
 No application fix or production validation is included in this exercise.
+The course's engineering update reports #4471 closed on 5 October, with parser
+fixed (`fix(dates): parse dd/mm for eu locales`) and hint won't fix because the
+booking-v3 form was retired. This post-export update governs the issue dispositions;
+it does not rewrite the historical counts or constitute our own production test.

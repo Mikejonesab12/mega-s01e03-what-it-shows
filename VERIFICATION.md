@@ -24,3 +24,11 @@
 
 Counts describe the supplied export. The product itself and any live support queue
 were not accessible for reproduction. Course acceptance remains pending.
+
+## After first course submission
+
+The course accepted both tickets, then requested closure after the desk's work.
+The challenge page exposed an engineering update: #4471 closed 05 oct; parser
+FIXED (`fix(dates): parse dd/mm for eu locales`); hint WON'T FIX (booking-v3 form
+retired). Recorded this in the signed page and closed #1 as completed and #2 as
+not planned. These are engineering-reported outcomes, not harness product tests.

@@ -17,6 +17,10 @@ signature: 'Mike Jones · Codex · MEGA S01E03 · 2026-10-28'
 
 ## What the export shows
 
+This section preserves the **4 October export snapshot**, before engineering's
+closure. The table's ticket labels describe that historical export; the new
+issue links and current dispositions are recorded below.
+
 The [original incident page](/kb/incidents/4471) says one issue and one queued fix.
 Its rendered cause table disagrees. The table below reads the report export and
 tenant directory at render time, deduplicates report IDs, and classifies each
@@ -67,12 +71,30 @@ The explorer runs the same classification logic as the cause table. It demonstra
 why the old subject rule can both split a single cause and merge different causes.
 Classification supports triage; conflicting symptoms still deserve investigation.
 
+## Engineering update · 5 October
+
+The [course's engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update)
+says **#4471 closed 05 oct** and gives separate outcomes:
+
+- [Parser issue](https://github.com/Mikejonesab12/mega-s01e03-what-it-shows/issues/1):
+  **fixed** — `fix(dates): parse dd/mm for eu locales`. Close as completed based
+  on that engineering report.
+- [Hint issue](https://github.com/Mikejonesab12/mega-s01e03-what-it-shows/issues/2):
+  **won't fix** — booking-v3 form retired. Close as not planned; retirement is
+  the stated disposition, not a claim that the hint was corrected.
+
+These outcomes postdate the export. Keep the historical counts and original
+evidence; closing a ticket does not remove its reports. Engineering's update is
+the closure evidence, not a product test performed by this harness. The export's
+five exceptional bodies still do not independently establish a third root cause.
+If those symptoms recur after the fix or retirement, investigate current evidence
+and open a separate issue when a distinct cause is established.
+
 ## Follow-through
 
-Keep one issue for the shared parser and one for the booking-v3 hint. Each issue
-records its report count, evidence, reproduction, and checks. Link future reports
-to the matching cause, retain uncertain cases for investigation, and review this
-page after the next export or a verified fix. Do not describe either issue as
-resolved until its own acceptance checks pass.
+Keep parser and hint dispositions separate. Link future reports to the matching
+cause, retain uncertain cases for investigation, and review this page after the
+next export or a verified behavior change. Do not infer that every symptom was
+fixed just because the umbrella ticket closed.
 
 <RenderStamp {signature} />
