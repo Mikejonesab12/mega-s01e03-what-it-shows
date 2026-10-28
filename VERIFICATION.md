@@ -14,7 +14,7 @@
   bundle with Vite. Build succeeded. No original kb source was changed.
 - Inspected the rendered new page in the browser. It shows 412 reports, two causes,
   379/33, the tags and tenant counts above, timeline, dedupe cases and desk ref
-  DR-VD5E-CE85. Saved full-page screenshot as preview.png.
+  DR-SNJY-07DS. Saved full-page screenshot as preview.png.
 - Verified the explorer: Alder Physio/form versus Kettle Books/form shows different
   causes. Changing the first channel to app changes it to parser and the verdict
   to same cause; restored form for the saved screenshot.

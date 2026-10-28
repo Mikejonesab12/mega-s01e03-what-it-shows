@@ -30,8 +30,8 @@ The reports and tenants are part of the course exercise.
 - [Complete report membership](drafts/report-membership.json)
 - [Verification record](VERIFICATION.md)
 
-The page's signature is `Mike Jones · Codex · MEGA S01E03 · 2026-10-28`.
-The supplied RenderStamp component derives desk ref **DR-VD5E-CE85** from it.
+The page carries the exact course-issued signature in its frontmatter.
+The supplied RenderStamp component derives desk ref **DR-SNJY-07DS** from it.
 Decision 0001 is preserved; decision 0002 proposes replacing its subject-only rule.
 Source components, tenant data and original pages are preserved.
 

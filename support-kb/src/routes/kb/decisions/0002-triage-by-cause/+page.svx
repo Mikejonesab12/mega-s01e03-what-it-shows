@@ -4,7 +4,7 @@ title: '0002 · Split #4471 and triage by cause'
 owner: Mike Jones and Codex
 status: proposed
 reviewed: '2026-10-28'
-signature: 'Mike Jones · Codex · MEGA S01E03 · 2026-10-28'
+signature: 'v1.eyJzdWIiOiI1MzcyIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMjIwODEsImV4cCI6MTc5MzMwODQ4MX0.bvBFoSDH0gAMogLcbHChvgFP1wYLlNKSq-PCSIhpOCg'
 ---
 
 <script>
