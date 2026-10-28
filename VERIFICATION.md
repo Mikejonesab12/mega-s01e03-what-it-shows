@@ -23,7 +23,7 @@
   record is unchanged; the new signed record remains proposed.
 
 Counts describe the supplied export. The product itself and any live support queue
-were not accessible for reproduction. Course acceptance remains pending.
+were not accessible for reproduction. The course accepted the final answer on 28 October 2026. The debrief is saved at https://hq.mega.dev/challenges/what-it-shows#debrief.
 
 ## After first course submission
 
